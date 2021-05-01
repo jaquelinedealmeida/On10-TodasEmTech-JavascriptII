@@ -6,3 +6,16 @@ const usuarios = [
     {user:238, name: 'Isis', idade:34 },
     {user:239, name: 'Pietra', idade:23 }
 ]
+
+const textoResultado = usuarios.map((participantes) => { 
+return  `Nome: ${participantes.name}, idade:${participantes.idade}`
+}); 
+
+console.log(participantes);
+
+//const nomes = usuarios.map((pessoas) => {
+
+//return `O usuário número ${participante.user} se chama ${participante.name} e tem ${participante.idade} anos`;
+});
+
+//console.log(nomes);

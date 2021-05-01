@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- versão do html -->
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Livros</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+      <!--<img src="./img/logo_livros.jpg" alt="imagem-livros">-->
+    </header>
+    <form class="envia_dados_tabela" onsubmit="exibirDados(event)">
+        <h1 class="titulo_formulario">New Books</h1>
+        <div class="texto--formulario">
+            <label for="titulo"><strong>Título</strong></label> 
+            <input type="text" name="titulo" id="tituloLivro" placeholder="Digite o título do livro aqui">
+            <label for="autor"><strong>Autor(a)*</strong></label>
+            <input type="text" name="autor" id="nomeAutor" placeholder="Digite o nome do autor(a)">
+            <label for="isbn"><strong>ISBN</strong></label>
+            <input type="text" name="isbn" id="isbnLivro" placeholder="Digite o ISBN aqui">
+            <label for="paginas"><strong>Páginas</strong></label>
+            <input type="number" name="paginas" id="paginasLivro" placeholder="Digite aqui o número de páginas">
+            <label for="data"><strong>Data de Publicação</strong></label>
+            <input type="date" name="data" id="dataPublicacao" placeholder="Digite a data de publicacao aqui">
+        </div>
+        <div class="enviar--resposta">
+                <input type="submit" name="adicionar" id="botaoDeAdicionar">
+            </div>
+         </form>
+             <table class="tabela">
+             <thead>
+                 <tr>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>ISBN</th>
+                    <th>Paginas</th>
+                    <th>Data de Publicação</th>
+                    <th>Data Inserção</th>
+                   
+                 </tr>
+             </thead>
+             <tbody id="corpoTabela">
+            </tbody>
+         </table>
+            <script src="./script/script.js"></script>            
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* GERAL */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* body */
+
+body {
+    background-color: rgb(230, 246, 247);
+    margin-left: 100px;
+   
+}
+
+/* formulário */
+h1 {
+    font-size: 40px;
+    color:rgb(7, 49, 104);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+  
+.form {
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  label {
+    color: rgb(7, 49, 104);
+    display:flex;
+  }
+
+  input.botaoadcionar {
+    width: 10rem;
+    height: 2rem;
+    background-color: rgb(96, 8, 99);
+    border: rgba(65, 4, 80, 0.5);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 00.5rem;
+    text-align: center;
+  }
+
+  /* tabela */
+  table {
+text-align: center;
+padding: 10px;
+display: block;
+margin: auto;
+margin-top: 20px;
+
+  }
+  
+  .container-table.on {
+    display: block;
+    margin: auto;
+    width: 18rem;
+    margin-bottom: 2rem;
+  }
+  
+  table {
+    font-size: 0.54rem;
+  }
+  
+  tr {
+    background: white;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .td-head {
+    padding: .2rem;
+    transition: 0.5s;
+    color: black;
+  }
+  
+  .td-head:hover {
+    background: rgb(226, 226, 226);
+    box-shadow: inset 0px -1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  td {
+    padding: 0.4rem;
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+  }
+  
+  /* medias */
+  @media (min-width: 375px) {
+    .icon-book {
+      margin: -1rem;
+      width: 6rem;
+    }
+  
+    .main-title {
+      font-size: 2rem;
+    }
+  
+    .container-button {
+      width: 21.5rem;
+    }
+  
+    input {
+      width: 22rem;
+    }
+  
+    .container-table.on {
+      width: 22rem;
+    }
+  
+    table {
+      font-size: 0.65rem;
+    }
+  }
+  
+  @media (min-width: 425px) {
+    .icon-book {
+      margin: -1rem;
+      width: 8rem;
+    }
+  
+    .main-title {
+      font-size: 2.5rem;
+    }
+  
+    .container-button {
+      width: 24.5rem;
+    }
+  
+    input {
+      width: 25rem;
+    }
+  
+    .container-table.on {
+      width: 25rem;
+    }
+  
+    table {
+      font-size: 0.78rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .icon-book {
+      margin: -1rem;
+      width: 10rem;
+    }
+  
+    .main-title {
+      font-size: 5rem;
+    }
+  
+    .container-button {
+      width: 44.5rem;
+    }
+  
+    input {
+      width: 45rem;
+      height: 3rem;
+    }
+  
+    .container-table.on {
+      width: 45rem;
+    }
+  
+    .td-head {
+      width: 10rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-form {
+      width: 45.8rem;
+      height: 35rem;
+    }
+  }
+  

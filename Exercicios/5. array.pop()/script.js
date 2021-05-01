@@ -1,4 +1,8 @@
-const listagemDeFrutas = [ "Uva", "Banana", "Manga", "Cajá", "Pinha", "Maçã", "Melão"];
+/*const listagemDeFrutas = [ "Uva", "Banana", "Manga", "Cajá", "Pinha", "Maçã", "Melão"];
+/*
+listagemDeFrutas.pop(); /*pode incluir somente o nome da ex: */
+//*
+*//console.log(listagemDeFrutas);
 
 const usuarios = [
     {user:234, name: 'Marcia', idade:40 },
@@ -8,3 +12,9 @@ const usuarios = [
     {user:238, name: 'Isis', idade:34 },
     {user:239, name: 'Pietra', idade:23 }
 ]
+
+const removeUsuario = usuarios.pop();
+
+console.log(usuarios);
+
+console.log(removeUsuario);

@@ -53,3 +53,71 @@ let books = [
         published: "2014-04-07T00:00:00.000Z",
     }
 ]
+
+
+function addLivros() {
+    
+    books.map((book) => {
+        const parseData = new Date(book.published);
+        const data = parseData.setDate(parseData.getDate() +1);
+        const dataFormatada = parseData.toDateString('pt-br');
+
+document.getElementById('corpoTabela').innerHTML += 
+`
+<tr >
+<td> ${book.title}</td>
+<td> ${book.author}</td>
+<td> ${book.isbn}</td>
+<td> ${book.pages}</td>
+<td> ${dataFormatada}</td>
+<td><button class="delete">Remover</button></td>
+</tr>
+`
+})
+
+}
+
+addLivros();
+
+
+function exibirDados(event) {
+    event.preventDefault();
+
+let pegaTitle = document.getElementById('tituloLivro').value;
+let pegaAuthor = document.getElementById('nomeAutor').value;
+let pegaIsbn = document.getElementById('isbnLivro').value;
+let pegaPages = document.getElementById('paginasLivro').value;
+let pegaDate = document.getElementById('dataPublicacao').value;
+
+if(pegaTitle === "" || pegaAuthor === "" || pegaIsbn === "" ||pegaPages === "" || pegaDate === "") {
+  alert("Campo Obrigatorio não preenchido")
+} else {
+books.push ({
+    author: pegaAuthor,
+    title: pegaTitle,
+    isbn: pegaIsbn,
+    pages: pegaPages,
+    published: pegaDate,
+
+});
+limparDados();
+addLivros();
+}
+
+}
+
+function limparDados() {
+
+  document.getElementById('tituloLivro').value = "";
+  document.getElementById('nomeAutor').value = "";
+  document.getElementById('isbnLivro').value = "";
+  document.getElementById('paginasLivro').value = "";
+  document.getElementById('dataPublicacao').value = "";
+ 
+}
+ document.getElementById('corpoTabela').addEventListener('click', function removerLinha(event) {
+     if(event.target.className === "delete") {
+     let botao = event.target.parentElement;
+     botao.parentElement.remove();
+     }
+ })
